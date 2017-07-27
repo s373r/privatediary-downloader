@@ -1,0 +1,25 @@
+{
+  "name": "privatediary-downloader",
+  "version": "1.0.0",
+  "description": "Automatic download all notes from privatediary.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chromium index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s373r/privatediary-downloader.git"
+  },
+  "keywords": [
+    "automatic", "testcafe"
+  ],
+  "author": "s373r",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/s373r/privatediary-downloader/issues"
+  },
+  "homepage": "https://github.com/s373r/privatediary-downloader#readme",
+  "dependencies": {
+    "testcafe": "^0.16.2"
+  }
+}
