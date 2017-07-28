@@ -18,7 +18,4 @@
     "url": "https://github.com/s373r/privatediary-downloader/issues"
   },
   "homepage": "https://github.com/s373r/privatediary-downloader#readme",
-  "dependencies": {
-    "testcafe": "^0.16.2"
-  }
 }
