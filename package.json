@@ -2,9 +2,8 @@
   "name": "privatediary-downloader",
   "version": "1.0.0",
   "description": "Automatic download all notes from privatediary.net",
-  "main": "index.js",
   "scripts": {
-    "test": "testcafe chromium index.js"
+    "test": "testcafe chromium src/main.js"
   },
   "repository": {
     "type": "git",
