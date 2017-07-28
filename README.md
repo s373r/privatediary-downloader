@@ -16,7 +16,10 @@ $ cd privatediary-downloader
 $ npm test
 ```
 
-If you don't use Chromium like me, please check [TestCafe browser support doc](https://devexpress.github.io/testcafe/documentation/using-testcafe/common-concepts/browser-support.html#locally-installed-browsers)
+If you don't use Chromium like me, please check [TestCafe browser support doc](https://devexpress.github.io/testcafe/documentation/using-testcafe/common-concepts/browser-support.html#locally-installed-browsers). You can easily run for example in Firefox:
+```
+$ testcafe firefox src/main.js
+```
 
 After that your notes will be saved at `output/` directory :notebook:
 
