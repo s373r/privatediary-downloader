@@ -2,6 +2,8 @@
 
 http://privatediary.net/ hasn't public API, but it isn't a problem for us :wink: 
 
+Written with https://github.com/DevExpress/testcafe :star2:
+
 ## Install
 
 ```
