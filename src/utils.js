@@ -1,7 +1,7 @@
 'use strict';
 
 function parseEntriesStatus(rawEntriesSummaryText) {
-    const regex = /Total entries: (\d+) \| Page: 1 of (\d+)/g;
+    const regex = /.*: (\d+) \| .*: 1 .* (\d+)$/m;
     const match = regex.exec(rawEntriesSummaryText);
     const noteCount = match[1];
     const pageCount = match[2];
