@@ -6,7 +6,7 @@ function parseEntriesStatus(rawEntriesSummaryText) {
     const noteCount = match[1];
     const pageCount = match[2];
 
-    return [noteCount, pageCount];
+    return [+noteCount, +pageCount];
 }
 
 function parseNote(rawNoteText) {
