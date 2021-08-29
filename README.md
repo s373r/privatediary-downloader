@@ -18,7 +18,7 @@ $ cd privatediary-downloader
 $ npm test
 ```
 
-If you don't use Chromium like me, please check [TestCafe browser support doc](https://devexpress.github.io/testcafe/documentation/using-testcafe/common-concepts/browser-support.html#locally-installed-browsers). You can easily run for example in Firefox:
+If you don't use Chromium like me, please check [TestCafe browser support doc](https://testcafe.io/documentation/402828/guides/concepts/browsers#locally-installed-browsers). You can easily run for example in Firefox:
 ```
 $ testcafe firefox src/main.js
 ```
