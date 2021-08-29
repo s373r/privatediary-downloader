@@ -1,7 +1,3 @@
-/**
- * Created by s373r on 26/07/17.
- */
-
 'use strict';
 
 import { Selector } from 'testcafe';
