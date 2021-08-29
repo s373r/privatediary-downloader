@@ -54,7 +54,7 @@ test('Grub notes', async t => {
 
     await t.expect(noteCount).notEql(0);
 
-    let noteUrls = [];
+    const noteUrls = [];
 
     // iterates pages and grubs note URLs
     for (let pageNo = 1; pageNo <= pageCount; ++pageNo) {
@@ -74,8 +74,7 @@ test('Grub notes', async t => {
     //
 
     const notePage = new NotePage();
-
-    let notes = [];
+    const notes = [];
 
     for (let index in noteUrls) {
         await t.navigateTo(noteUrls[index]);
