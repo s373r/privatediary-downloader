@@ -76,8 +76,8 @@ test('Grub notes', async (t) => {
     const notePage = new NotePage();
     const notes = [];
 
-    for (let index in noteUrls) {
-        await t.navigateTo(noteUrls[index]);
+    for (const noteUrl of noteUrls) {
+        await t.navigateTo(noteUrl);
 
         notes.push(await notePage.getNote());
     }
