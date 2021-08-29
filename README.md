@@ -26,6 +26,8 @@ $ npm run grab:chrome
 
 After that your notes will be saved at `output/` directory :notebook:
 
-## Nota bene
+## ⚠️ Important note
 
-http://privatediary.net/ works under **HTTP**. Maybe a good idea after download notes - stop using these service :ok_hand:
+http://privatediary.net/ works under **HTTP** (totally unsecure)! 
+
+After downloading, please transfer your notes to any modern alternative
