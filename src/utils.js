@@ -15,7 +15,7 @@ function parseNote(rawNoteText) {
     const timeStamp = noteLines[noteLines.length - 2].trim();
     const text = noteLines.slice(2, noteLines.length - 2).join('\n');
 
-    return { title:title, timeStamp:timeStamp, text:text };
+    return { title, timeStamp, text };
 }
 
 export { parseEntriesStatus, parseNote };
