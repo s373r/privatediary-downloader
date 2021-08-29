@@ -4,7 +4,7 @@ import { Selector } from 'testcafe';
 
 import { parseEntriesStatus, parseNote } from './utils';
 
-export class LoginPage {
+class LoginPage {
     constructor () {
         this.userNameInput = Selector('#UserName');
         this.passwordInput = Selector('#Password');
@@ -12,7 +12,7 @@ export class LoginPage {
     }
 }
 
-export class MainPage {
+class MainPage {
     constructor () {
         this.entriesSummaryText = Selector('body >div.container.body-content > div:nth-child(2) > div.col-md-9');
         this.readMoreButtons = Selector('a').filter((node) => node.textContent === 'Read more ');
@@ -36,7 +36,7 @@ export class MainPage {
     }
 }
 
-export class NotePage {
+class NotePage {
     constructor() {
         // Because of !@#ing "Uncaught ReferenceError: jQuery is not defined"
         // on "http://privatediary.net/Records/Edit/", therefore we have the hard way :(
@@ -48,4 +48,10 @@ export class NotePage {
 
         return parseNote(rawNoteText);
     }
+}
+
+export {
+    LoginPage,
+    MainPage,
+    NotePage,
 }
