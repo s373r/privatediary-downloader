@@ -12,15 +12,16 @@ $ cd privatediary-downloader
 $ npm i
 ```
 
-## For start downloading
+## Quick start
 
+Run grabbing with:
 ```
-$ npm test
+$ npm run grab:firefox
 ```
 
-If you don't use Chromium like me, please check [TestCafe browser support doc](https://testcafe.io/documentation/402828/guides/concepts/browsers#locally-installed-browsers). You can easily run for example in Firefox:
+Or if you prefer Google Chrome:
 ```
-$ testcafe firefox src/main.js
+$ npm run grab:chrome
 ```
 
 After that your notes will be saved at `output/` directory :notebook:
