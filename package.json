@@ -10,12 +10,16 @@
     "url": "git+https://github.com/s373r/privatediary-downloader.git"
   },
   "keywords": [
-    "automatic", "testcafe"
+    "automatic",
+    "testcafe"
   ],
   "author": "s373r",
   "license": "LGPL-3.0",
   "bugs": {
     "url": "https://github.com/s373r/privatediary-downloader/issues"
   },
-  "homepage": "https://github.com/s373r/privatediary-downloader#readme"
+  "homepage": "https://github.com/s373r/privatediary-downloader#readme",
+  "devDependencies": {
+    "testcafe": "^1.15.3"
+  }
 }
