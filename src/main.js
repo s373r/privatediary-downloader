@@ -71,7 +71,7 @@ test('Grub notes', async (t) => {
     }
 
     // checks count of notes
-    await t.expect(noteCount).eql(noteUrls.length.toString());
+    await t.expect(noteCount).eql(noteUrls.length);
 
     //
     // Grub notes
