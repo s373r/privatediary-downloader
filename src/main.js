@@ -70,7 +70,6 @@ test('Grub notes', async t => {
         await t.navigateTo(noteUrls[index]);
 
         notes.push(await notePage.getNote());
-        console.log(notes);
     }
 
     //
