@@ -24,6 +24,8 @@ fixture `Getting Started`
     .page `http://privatediary.net/`;
 
 test('Grub notes', async (t) => {
+    console.log();
+
     //
     // Login
     //
@@ -52,6 +54,8 @@ test('Grub notes', async (t) => {
     const noteCount = entriesStatus[0];
     const pageCount = entriesStatus[1];
 
+    console.log(`ℹ️ Found ${noteCount} note(s) from ${pageCount} page(s)`);
+
     await t.expect(noteCount).notEql(0);
 
     const noteUrls = [];
@@ -76,11 +80,19 @@ test('Grub notes', async (t) => {
     const notePage = new NotePage();
     const notes = [];
 
+    console.log(`ℹ️ Processing notes...`);
+
     for (const noteUrl of noteUrls) {
         await t.navigateTo(noteUrl);
 
-        notes.push(await notePage.getNote());
+        const note = await notePage.getNote()
+
+        console.log(`   • ${note.title} ✔️`)
+
+        notes.push(note);
     }
+
+    console.log(`ℹ️ Processing notes... ✔️`);
 
     //
     // Save to a file
@@ -104,4 +116,6 @@ test('Grub notes', async (t) => {
 
         stream.end();
     });
+
+    console.log();
 });
