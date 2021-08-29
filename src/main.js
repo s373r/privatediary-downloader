@@ -23,7 +23,7 @@ async function createDirectoryIfNeeded(directory) {
 fixture `Getting Started`
     .page `http://privatediary.net/`;
 
-test('Grub notes', async t => {
+test('Grub notes', async (t) => {
     //
     // Login
     //
@@ -38,7 +38,7 @@ test('Grub notes', async t => {
         .click(loginPage.loginButton);
 
     const createNewEntryButtonExist =
-        Selector('a').filter(node => node.textContent === 'Create new entry').exists;
+        Selector('a').filter((node) => node.textContent === 'Create new entry').exists;
 
     // checks success of auth
     await t.expect(createNewEntryButtonExist).ok();
@@ -63,7 +63,7 @@ test('Grub notes', async t => {
             await t.navigateTo('/?page=' + pageNo);
         }
 
-        await mainPage.hrefForEachReadMoreButtons(href => noteUrls.push(href));
+        await mainPage.hrefForEachReadMoreButtons((href) => noteUrls.push(href));
     }
 
     // checks count of notes
