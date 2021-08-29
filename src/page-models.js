@@ -15,7 +15,7 @@ class LoginPage {
 class MainPage {
     constructor () {
         this.entriesSummaryText = Selector('body >div.container.body-content > div:nth-child(2) > div.col-md-9');
-        this.readMoreButtons = Selector('a').filter((node) => node.textContent === 'Read more ');
+        this.readMoreButtons = Selector('.media').find('.btn');
     }
 
     async getEntriesStatus() {

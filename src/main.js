@@ -39,11 +39,10 @@ test('Grub notes', async (t) => {
         .typeText(loginPage.passwordInput, password)
         .click(loginPage.loginButton);
 
-    const createNewEntryButtonExist =
-        Selector('a').filter((node) => node.textContent === 'Create new entry').exists;
+    const searchInputExist = Selector('#search').exists;
 
     // checks success of auth
-    await t.expect(createNewEntryButtonExist).ok();
+    await t.expect(searchInputExist).ok();
 
     //
     // Grub notes URLs
