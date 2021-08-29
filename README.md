@@ -7,9 +7,9 @@ Written with https://github.com/DevExpress/testcafe :star2:
 ## Install
 
 ```
-$ npm install -g testcafe
 $ git clone https://github.com/s373r/privatediary-downloader
 $ cd privatediary-downloader
+$ npm i
 ```
 
 ## For start downloading
