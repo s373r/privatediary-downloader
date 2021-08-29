@@ -12,7 +12,7 @@ export class LoginPage {
     constructor () {
         this.userNameInput = Selector('#UserName');
         this.passwordInput = Selector('#Password');
-        this.loginButton   = Selector('input[type=submit]');
+        this.loginButton = Selector('input[type=submit]');
     }
 }
 
@@ -33,7 +33,7 @@ export class MainPage {
 
         for (let i = 0; i < readMoreButtonsCount; ++i) {
             const readMoreButton = this.readMoreButtons.nth(i);
-            const href           = await readMoreButton.getAttribute('href');
+            const href = await readMoreButton.getAttribute('href');
 
             callback(href);
         }
