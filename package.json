@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/s373r/privatediary-downloader#readme",
   "dependencies": {
+    "commander": "^8.1.0",
     "dayjs": "^1.10.6",
     "node-html-parser": "^4.1.4",
     "testcafe": "^1.15.3"
