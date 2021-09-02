@@ -1,5 +1,6 @@
 'use strict';
 
+import dayjs from 'dayjs';
 import { NodeType, parse } from 'node-html-parser';
 import { Selector } from 'testcafe';
 
@@ -59,7 +60,8 @@ class NotePage {
         const titleElement = this.noteDiv.find('h3')
         const title = (await titleElement.innerText).trim();
         const timestampElement = this.noteDiv.find('.time-meta');
-        const timestamp = Number(await timestampElement.getAttribute('data-entrydate'));
+        const timestampValue = Number(await timestampElement.getAttribute('data-entrydate'));
+        const timestamp = dayjs(timestampValue).format('YYYY-MM-DD HH:mm:ss')
 
         return {
             text,
