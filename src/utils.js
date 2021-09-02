@@ -9,13 +9,6 @@ function parseEntriesStatus(rawEntriesSummaryText) {
     return [+noteCount, +pageCount];
 }
 
-function parseNote(rawNoteText) {
-    const noteLines = rawNoteText.split('\n');
-    const title = noteLines[0];
-    const timeStamp = noteLines[noteLines.length - 2].trim();
-    const text = noteLines.slice(2, noteLines.length - 2).join('\n');
-
-    return { title, timeStamp, text };
-}
-
-export { parseEntriesStatus, parseNote };
+export {
+    parseEntriesStatus,
+};
