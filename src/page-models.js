@@ -1,8 +1,9 @@
 'use strict';
 
+import { NodeType, parse } from 'node-html-parser';
 import { Selector } from 'testcafe';
 
-import { parseEntriesStatus, parseNote } from './utils';
+import { parseEntriesStatus } from './utils';
 
 class LoginPage {
     constructor () {
@@ -38,15 +39,33 @@ class MainPage {
 
 class NotePage {
     constructor() {
-        // Because of !@#ing "Uncaught ReferenceError: jQuery is not defined"
-        // on "http://privatediary.net/Records/Edit/", therefore we have the hard way :(
-        this.noteText = Selector('body > div.container.body-content > div:nth-child(2)');
+        this.noteDiv = Selector('.body-content > div:nth-child(2)').addCustomDOMProperties({
+            innerHTML: el => el.innerHTML,
+        });
+    }
+
+    async #getText() {
+        const noteHtml = await this.noteDiv.innerHTML;
+
+        return parse(noteHtml).childNodes
+            .filter(({ nodeType }) => nodeType === NodeType.TEXT_NODE)
+            .map(({ text }) => text.trim())
+            .filter((text) => text !== '')
+            .join('\n')
     }
 
     async getNote() {
-        const rawNoteText = await this.noteText.innerText;
+        const text = await this.#getText()
+        const titleElement = this.noteDiv.find('h3')
+        const title = (await titleElement.innerText).trim();
+        const timestampElement = this.noteDiv.find('.time-meta')
+        const timestamp = await timestampElement.getAttribute('data-entrydate');
 
-        return parseNote(rawNoteText);
+        return {
+            text,
+            title,
+            timestamp,
+        };
     }
 }
 
