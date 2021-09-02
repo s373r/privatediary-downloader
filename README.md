@@ -21,14 +21,15 @@ $ node . --help # or npm start --help
 Usage: privatediary-downloader [options]
 
 Options:
-  -V, --version  output the version number
+  -V, --version      output the version number
   -u <user>
   -p <password>
-  -b [browser]   specify browser to launch (default: "firefox")
-  -h, --help     display help for command
+  -b [browser]       specify browser to launch (default: "firefox")
+  -s, --sort [kind]  change output sorting kind (choices: "asc", "desc", default: "desc")
+  -h, --help         display help for command
 ```
 
-Run grabbing with FireFox:
+Run grabbing with Firefox:
 ```
 $ node . -u USER -p PASSWORD
 ```
@@ -47,7 +48,7 @@ List all available browsers:
 $ npm run list
 ```
 
-Pick one from the previous command output (e.g. safari) and run:
+Pick one from the previous command output (e.g. Safari) and run:
 ```
 $ node . -u USER -p PASSWORD -b safari
 ```

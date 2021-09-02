@@ -107,7 +107,12 @@ test('Grub notes', async (t) => {
         stream.write(`Version: ${process.env['PDD_VERSION']}\n`);
         stream.write('\n');
 
-        for (const { title, timestamp, text } of notes) {
+        const sortingKind = process.env['PDD_SORT'];
+        const sortedNotes = sortingKind === 'desc'
+            ? notes // already sorted
+            : notes.reverse();
+
+        for (const { title, timestamp, text } of sortedNotes) {
             stream.write(`${title}\n`);
             stream.write(`${timestamp}\n`);
             stream.write(`${text}\n`);
