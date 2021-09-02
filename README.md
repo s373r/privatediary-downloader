@@ -1,4 +1,4 @@
-# privatediary-downloader
+# Private Diary downloader
 
 http://privatediary.net/ hasn't public API, but it isn't a problem for us :wink: 
 
