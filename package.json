@@ -21,10 +21,8 @@
     "url": "https://github.com/s373r/privatediary-downloader/issues"
   },
   "homepage": "https://github.com/s373r/privatediary-downloader#readme",
-  "devDependencies": {
-    "testcafe": "^1.15.3"
-  },
   "dependencies": {
-    "node-html-parser": "^4.1.4"
+    "node-html-parser": "^4.1.4",
+    "testcafe": "^1.15.3"
   }
 }
