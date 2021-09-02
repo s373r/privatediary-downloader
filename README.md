@@ -1,6 +1,6 @@
 # Private Diary downloader
 
-http://privatediary.net/ hasn't public API, but it isn't a problem for us :wink: 
+http://privatediary.net/ hasn't public API, but it isn't a problem for us :wink:
 
 Written with https://github.com/DevExpress/testcafe :star2:
 
@@ -14,14 +14,28 @@ $ npm i
 
 ## Quick start
 
-Run grabbing with:
+```shell
+$ node . --help # or npm start --help
 ```
-$ npm run grab:firefox
+```shell
+Usage: privatediary-downloader [options]
+
+Options:
+  -V, --version  output the version number
+  -u <user>
+  -p <password>
+  -b [browser]   specify browser to launch (default: "firefox")
+  -h, --help     display help for command
+```
+
+Run grabbing with FireFox:
+```
+$ node . -u USER -p PASSWORD
 ```
 
 Or if you prefer Google Chrome:
 ```
-$ npm run grab:chrome
+$ node . -u USER -p PASSWORD -b chrome
 ```
 
 After that your notes will be saved at `output/` directory :notebook:
@@ -35,7 +49,7 @@ $ npm run list
 
 Pick one from the previous command output (e.g. safari) and run:
 ```
-$ npx testcafe safari src/main.js
+$ node . -u USER -p PASSWORD -b safari
 ```
 
 ## ⚠️ Important note

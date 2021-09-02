@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Automatic download all notes from privatediary.net",
   "scripts": {
-    "grab:firefox": "npx testcafe firefox src/main.js",
-    "grab:chrome": "npx testcafe chrome src/main.js",
+    "start": "node .",
     "list": "npx testcafe -b"
   },
   "main": "./src/cli.js",
