@@ -23,5 +23,8 @@
   "homepage": "https://github.com/s373r/privatediary-downloader#readme",
   "devDependencies": {
     "testcafe": "^1.15.3"
+  },
+  "dependencies": {
+    "node-html-parser": "^4.1.4"
   }
 }
