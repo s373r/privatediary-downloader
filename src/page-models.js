@@ -51,15 +51,15 @@ class NotePage {
             .filter(({ nodeType }) => nodeType === NodeType.TEXT_NODE)
             .map(({ text }) => text.trim())
             .filter((text) => text !== '')
-            .join('\n')
+            .join('\n');
     }
 
     async getNote() {
         const text = await this.#getText()
         const titleElement = this.noteDiv.find('h3')
         const title = (await titleElement.innerText).trim();
-        const timestampElement = this.noteDiv.find('.time-meta')
-        const timestamp = await timestampElement.getAttribute('data-entrydate');
+        const timestampElement = this.noteDiv.find('.time-meta');
+        const timestamp = Number(await timestampElement.getAttribute('data-entrydate'));
 
         return {
             text,
