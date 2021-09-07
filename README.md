@@ -1,6 +1,6 @@
 # Private Diary downloader
 
-http://privatediary.net/ hasn't public API, but it isn't a problem for us :wink:
+Private Diary doesn't have the export feature and API for that, so we need this program :wink:
 
 Written with https://github.com/DevExpress/testcafe :star2:
 
